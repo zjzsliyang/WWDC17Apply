@@ -40,7 +40,103 @@ a Swift Playgrounds Project applying for WWDC17
 
 The primary idea is to build a PlaygroundBook.
 
-- to teach the student learn something.
+to teach the student learn something.
+
+- 一元二次方程
+  - 一元二次方程的形式
+  - 三种求解方法
+  - 韦达定理
+- 浮力和阿基米德公式
+  - F = G
+  - F = G_pai
+  - F = \rho*gV
+- 勾股定理
+  - ​
+- 等比数列和等差数列
+  - ​
+- 三角函数的和差化积倍角半角
+  - ​
+- 立体 体积与面积
+  - 卡瓦列里原理(祖暅原理)Cavalieri's principle
+- 力的平衡
 
 
+## Issues
 
+- What's **live view**
+
+## Notes
+
+- Playground Book Package
+  - Content Hierarchy
+  - Folder Name Extensions
+    - .playgroundbook
+    - .playgroundchapter
+    - .playgroundpage
+    - .cutscenepage
+  - Folders in the Package Structure
+    - Contents
+    - Chapters
+    - Pages
+  - Shared Folders
+    - Resources
+    - Sources
+  - Specially Named Files
+    - Manifest.plist
+    - Contents.swift
+    - LiveView.swift
+- Manifest Files
+  - Book Manifest
+    - Chapters Key
+    - ContentIdenrifier Key
+    - ContentVersion Key
+    - DeploymentTarget Key
+    - ImageReference Key
+      - .png file and in *Resources* folder
+      - 4:3 image & 400*300 pixels image size
+    - Name Key
+    - Version Key
+    - SwiftVersion Key
+  - Chapter Manifest
+    - Name Key
+    - Page Key
+  - Cutscene Page Manifest
+    - CotsceneReference
+    - Name
+  - Playground Page Manifest
+    - Hints
+    - LiveViewEdgeToEdge
+    - LiveViewMode
+    - Name
+    - PlaygroundLoggingMode
+    - PosterReference
+    - CodeCopySetup
+- Playground Page Delimiters
+  - About Page Markup Delimiters
+  - Editable Areas
+  - Placeholder Tokens
+  - Hidden Code
+  - Customized Code Completion
+- Glossary
+  - Glossary Property List
+    - Terms
+    - Term Name
+  - Linking to Terms
+- PlaygroundSupportModule
+  - Access a playground page and manage its execution
+  - Display and dismiss live views
+  - Share and access persistent data
+  - Send and receive messages between playgrounds and live views
+  - Set and get the learning progress of the user, update hints, and show success text.
+- Available Frameworks
+  - math(Accelerate)
+  - audio
+  - video
+  - image
+  - Network
+  - Bluetooth
+  - CoreData
+  - CoreFoundation
+  - CoreGraphic
+  - Foundation
+- Revision History
