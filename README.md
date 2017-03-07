@@ -50,15 +50,13 @@ to teach the student learn something.
   - F = G
   - F = G_pai
   - F = \rho*gV
-- 勾股定理
-  - ​
-- 等比数列和等差数列
-  - ​
-- 三角函数的和差化积倍角半角
-  - ​
 - 立体 体积与面积
   - 卡瓦列里原理(祖暅原理)Cavalieri's principle
-- 力的平衡
+- 力学
+  - 力的平衡
+  - 圆周运动
+  - 万有引力
+  - 匀加速直线运动
 
 
 ## Issues
