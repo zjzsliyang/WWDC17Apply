@@ -42,6 +42,8 @@ The primary idea is to build a PlaygroundBook.
 
 to teach the student learn something.
 
+must with a game.
+
 - 一元二次方程
   - 一元二次方程的形式
   - 三种求解方法
@@ -54,10 +56,30 @@ to teach the student learn something.
   - 卡瓦列里原理(祖暅原理)Cavalieri's principle
 - 力学
   - 力的平衡
-  - 圆周运动
+  - **圆周运动**
+    - 平面 vs 竖直CoreMotion
   - 万有引力
-  - 匀加速直线运动
+  - **匀加速直线运动**
+- 数独
 
+
+------
+
+- 具体想法：
+  - 力的平衡
+    - User 写代码，给出合力大小和方向，否则小球移动
+  - 匀加速直线运动
+    - User 自定义加速度，通过模拟动画，验证不同运动方程
+  - 圆周运动
+    - User 自定义速度，探究满足匀速圆周运动的公式
+    - 增加一个竖直加速度，探索小球在最低点的最小速度
+
+------
+
+- 进一步想法
+  - 合力的计算，控制小球的运动，使其打中目标
+  - 引力的计算
+  - 圆周运动​ 向心力的计算
 
 ## Issues
 
