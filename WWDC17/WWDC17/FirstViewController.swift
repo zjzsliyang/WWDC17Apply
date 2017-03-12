@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+var times = 0
+
+class FirstViewController: UIViewController {
   @IBOutlet var tapGesture: UITapGestureRecognizer!
   @IBOutlet weak var ballOutlet: UIButton!
   var ballIsPressed = false
@@ -18,6 +20,13 @@ class ViewController: UIViewController {
     ballGravityFall()
   }
 
+  @IBAction func dragOutside(_ sender: UIButton) {
+    times = times + 1
+    print("hello")
+    print(times)
+    print(String(describing: sender))
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor(red: 242/255, green: 232/255, blue: 219/255, alpha: 1)

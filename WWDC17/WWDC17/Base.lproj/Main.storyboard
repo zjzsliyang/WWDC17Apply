@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D30-dj-XlH">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WWDC17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="WWDC17" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,9 +24,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8G-kN-ZAU">
                                 <rect key="frame" x="462" y="633" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Button" image="ball"/>
                                 <connections>
                                     <action selector="ballButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqx-EZ-5PY"/>
+                                    <action selector="dragOutside:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="Y3w-06-Lez"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stake1" translatesAutoresizingMaskIntoConstraints="NO" id="OTE-gk-z6V">
@@ -44,18 +46,49 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="pbY-lK-9uq" appends="YES" id="vCe-CL-rgI"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="ballOutlet" destination="f8G-kN-ZAU" id="uJj-hl-VRr"/>
-                        <outlet property="tapGesture" destination="pbY-lK-9uq" id="dUA-Ja-Ihn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="pbY-lK-9uq"/>
             </objects>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="4Mb-pu-bh4">
+            <objects>
+                <viewController id="eNd-2c-9E8" customClass="SecondViewController" customModule="WWDC17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Ph-nu-Nng"/>
+                        <viewControllerLayoutGuide type="bottom" id="kWI-2Y-QEI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uem-rw-O4N">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cx7-TD-5DM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="28"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="egj-VN-IR9">
+            <objects>
+                <viewController id="D30-dj-XlH" customClass="ThirdViewController" customModule="WWDC17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1hq-26-aih"/>
+                        <viewControllerLayoutGuide type="bottom" id="6XQ-9C-m5g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NWB-0V-7cc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geo-Rq-UN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612" y="793"/>
         </scene>
     </scenes>
     <resources>

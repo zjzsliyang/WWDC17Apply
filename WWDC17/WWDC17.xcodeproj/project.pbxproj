@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0690851E73EB84007AD3E9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0690841E73EB84007AD3E9 /* SecondViewController.swift */; };
+		2F0690971E73F356007AD3E9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0690961E73F356007AD3E9 /* ThirdViewController.swift */; };
+		2F0690991E73F3E7007AD3E9 /* EarthRocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0690981E73F3E7007AD3E9 /* EarthRocketView.swift */; };
+		2F06909B1E74255C007AD3E9 /* animationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F06909A1E74255C007AD3E9 /* animationView.swift */; };
 		2F9BEC3D1E70FC3A00E2B2D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9BEC3C1E70FC3A00E2B2D5 /* AppDelegate.swift */; };
-		2F9BEC3F1E70FC3A00E2B2D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9BEC3E1E70FC3A00E2B2D5 /* ViewController.swift */; };
+		2F9BEC3F1E70FC3A00E2B2D5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9BEC3E1E70FC3A00E2B2D5 /* FirstViewController.swift */; };
 		2F9BEC421E70FC3A00E2B2D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9BEC401E70FC3A00E2B2D5 /* Main.storyboard */; };
 		2F9BEC441E70FC3A00E2B2D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9BEC431E70FC3A00E2B2D5 /* Assets.xcassets */; };
 		2F9BEC471E70FC3A00E2B2D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9BEC451E70FC3A00E2B2D5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F0690841E73EB84007AD3E9 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2F0690961E73F356007AD3E9 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		2F0690981E73F3E7007AD3E9 /* EarthRocketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthRocketView.swift; sourceTree = "<group>"; };
+		2F06909A1E74255C007AD3E9 /* animationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animationView.swift; sourceTree = "<group>"; };
 		2F9BEC391E70FC3A00E2B2D5 /* WWDC17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9BEC3C1E70FC3A00E2B2D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F9BEC3E1E70FC3A00E2B2D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F9BEC3E1E70FC3A00E2B2D5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		2F9BEC411E70FC3A00E2B2D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F9BEC431E70FC3A00E2B2D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F9BEC461E70FC3A00E2B2D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				2F9BEC3C1E70FC3A00E2B2D5 /* AppDelegate.swift */,
-				2F9BEC3E1E70FC3A00E2B2D5 /* ViewController.swift */,
+				2F9BEC3E1E70FC3A00E2B2D5 /* FirstViewController.swift */,
+				2F0690841E73EB84007AD3E9 /* SecondViewController.swift */,
+				2F0690961E73F356007AD3E9 /* ThirdViewController.swift */,
+				2F06909A1E74255C007AD3E9 /* animationView.swift */,
+				2F0690981E73F3E7007AD3E9 /* EarthRocketView.swift */,
 				2F9BEC401E70FC3A00E2B2D5 /* Main.storyboard */,
 				2F9BEC431E70FC3A00E2B2D5 /* Assets.xcassets */,
 				2F9BEC451E70FC3A00E2B2D5 /* LaunchScreen.storyboard */,
@@ -97,6 +109,7 @@
 					2F9BEC381E70FC3A00E2B2D5 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = G4WT85FFHH;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F9BEC3F1E70FC3A00E2B2D5 /* ViewController.swift in Sources */,
+				2F0690851E73EB84007AD3E9 /* SecondViewController.swift in Sources */,
+				2F9BEC3F1E70FC3A00E2B2D5 /* FirstViewController.swift in Sources */,
+				2F0690971E73F356007AD3E9 /* ThirdViewController.swift in Sources */,
+				2F0690991E73F3E7007AD3E9 /* EarthRocketView.swift in Sources */,
 				2F9BEC3D1E70FC3A00E2B2D5 /* AppDelegate.swift in Sources */,
+				2F06909B1E74255C007AD3E9 /* animationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,11 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = G4WT85FFHH;
 				INFOPLIST_FILE = WWDC17/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.WWDC17;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = G4WT85FFHH;
 				INFOPLIST_FILE = WWDC17/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -302,6 +322,7 @@
 				2F9BEC4D1E70FC3A00E2B2D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
