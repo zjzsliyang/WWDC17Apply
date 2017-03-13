@@ -17,5 +17,4 @@ class ThirdViewController: UIViewController {
     animaView.animationView(earthSpeeds: 1.0, rocketSpeeds: 2.0)
   }
   
-  
 }

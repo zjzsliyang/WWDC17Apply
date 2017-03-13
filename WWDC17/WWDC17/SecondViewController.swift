@@ -9,17 +9,22 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+  var dynamicAnimator = UIDynamicAnimator()
+  var gravitationalAcceleration = 2.0
+  @IBOutlet weak var football: UIImageView!
+  @IBOutlet weak var baseball: UIImageView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    ballGravityFall()
     // Do any additional setup after loading the view.
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  func ballGravityFall() {
+    dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
+    let gravityBehavior = UIGravityBehavior(items: [self.baseball, self.football])
+    gravityBehavior.magnitude = CGFloat(gravitationalAcceleration)
+    dynamicAnimator.addBehavior(gravityBehavior)
   }
   
-
 }

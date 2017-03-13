@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D30-dj-XlH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eNd-2c-9E8">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -65,12 +65,30 @@
                     <view key="view" contentMode="scaleToFill" id="Uem-rw-O4N">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PisaTower" translatesAutoresizingMaskIntoConstraints="NO" id="BLQ-ow-EIl">
+                                <rect key="frame" x="633" y="175" width="391" height="1191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="baseball" translatesAutoresizingMaskIntoConstraints="NO" id="GYv-1e-acp">
+                                <rect key="frame" x="72" y="359" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="5g6-0M-Rkr">
+                                <rect key="frame" x="209" y="311" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="baseball" destination="GYv-1e-acp" id="5af-RE-gEP"/>
+                        <outlet property="football" destination="5g6-0M-Rkr" id="P04-xG-a8X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cx7-TD-5DM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="28"/>
+            <point key="canvasLocation" x="786.9140625" y="44.802342606149338"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="egj-VN-IR9">
@@ -88,11 +106,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geo-Rq-UN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="612" y="793"/>
+            <point key="canvasLocation" x="1522" y="45"/>
         </scene>
     </scenes>
     <resources>
+        <image name="PisaTower" width="6410" height="4276"/>
         <image name="ball" width="305" height="309"/>
+        <image name="baseball" width="1051" height="1018"/>
         <image name="gate" width="186" height="99"/>
         <image name="stack2" width="450" height="278"/>
         <image name="stake1" width="383" height="344"/>
