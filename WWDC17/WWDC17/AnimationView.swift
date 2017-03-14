@@ -1,5 +1,5 @@
 //
-//  animationView.swift
+//  AnimationView.swift
 //  WWDC17
 //
 //  Created by Yang Li on 11/03/2017.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class animationView: UIView {
+public class AnimationView: UIView {
   var earthSpeed : CGFloat = 0.0
   var rocketSpeed : CGFloat = 0.0
-  public func animationView(earthSpeeds: CGFloat, rocketSpeeds: CGFloat) {
+  public func animationSpeed(earthSpeeds: CGFloat, rocketSpeeds: CGFloat) {
     earthSpeed = earthSpeeds
     rocketSpeed = rocketSpeeds
   }
@@ -26,7 +26,6 @@ public class animationView: UIView {
   }
   
   public func aniamationInit() {
-    self.backgroundColor = UIColor.blue
     let displayLink = CADisplayLink(target: self, selector: #selector(setNeedsDisplay(_:) ))
     displayLink.add(to: .main, forMode: .defaultRunLoopMode)
     

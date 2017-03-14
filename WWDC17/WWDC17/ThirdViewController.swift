@@ -12,15 +12,14 @@ class ThirdViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let animaView = animationView(frame: self.view.bounds)
-    self.view.addSubview(animaView)
-    animaView.animationView(earthSpeeds: 1.0, rocketSpeeds: 2.0)
+    let backgroundView = UIImageView(image: UIImage(named: "sky"))
+    backgroundView.frame = self.view.bounds
+    backgroundView.contentMode = .scaleAspectFill
+    self.view.addSubview(backgroundView)
     
-    var forceLevel : Double = 50
-    let outletForce = UILabel(frame: CGRect(x: 150, y: 460, width: 100, height: 30))
-    outletForce.text = "F = " + String(forceLevel) + "N"
-    outletForce.textColor = UIColor.white
-    self.view.addSubview(outletForce)
+    let animationView = AnimationView(frame: self.view.bounds)
+    self.view.addSubview(animationView)
+    animationView.animationSpeed(earthSpeeds: 1.0, rocketSpeeds: 2.0)
+
   }
-  
 }

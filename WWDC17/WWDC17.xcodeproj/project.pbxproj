@@ -10,7 +10,7 @@
 		2F0690851E73EB84007AD3E9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0690841E73EB84007AD3E9 /* SecondViewController.swift */; };
 		2F0690971E73F356007AD3E9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0690961E73F356007AD3E9 /* ThirdViewController.swift */; };
 		2F0690991E73F3E7007AD3E9 /* EarthRocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0690981E73F3E7007AD3E9 /* EarthRocketView.swift */; };
-		2F06909B1E74255C007AD3E9 /* animationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F06909A1E74255C007AD3E9 /* animationView.swift */; };
+		2F06909B1E74255C007AD3E9 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F06909A1E74255C007AD3E9 /* AnimationView.swift */; };
 		2F9BEC3D1E70FC3A00E2B2D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9BEC3C1E70FC3A00E2B2D5 /* AppDelegate.swift */; };
 		2F9BEC3F1E70FC3A00E2B2D5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9BEC3E1E70FC3A00E2B2D5 /* FirstViewController.swift */; };
 		2F9BEC421E70FC3A00E2B2D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9BEC401E70FC3A00E2B2D5 /* Main.storyboard */; };
@@ -22,7 +22,7 @@
 		2F0690841E73EB84007AD3E9 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2F0690961E73F356007AD3E9 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		2F0690981E73F3E7007AD3E9 /* EarthRocketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthRocketView.swift; sourceTree = "<group>"; };
-		2F06909A1E74255C007AD3E9 /* animationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animationView.swift; sourceTree = "<group>"; };
+		2F06909A1E74255C007AD3E9 /* AnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		2F9BEC391E70FC3A00E2B2D5 /* WWDC17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9BEC3C1E70FC3A00E2B2D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F9BEC3E1E70FC3A00E2B2D5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 				2F9BEC3E1E70FC3A00E2B2D5 /* FirstViewController.swift */,
 				2F0690841E73EB84007AD3E9 /* SecondViewController.swift */,
 				2F0690961E73F356007AD3E9 /* ThirdViewController.swift */,
-				2F06909A1E74255C007AD3E9 /* animationView.swift */,
+				2F06909A1E74255C007AD3E9 /* AnimationView.swift */,
 				2F0690981E73F3E7007AD3E9 /* EarthRocketView.swift */,
 				2F9BEC401E70FC3A00E2B2D5 /* Main.storyboard */,
 				2F9BEC431E70FC3A00E2B2D5 /* Assets.xcassets */,
@@ -155,7 +155,7 @@
 				2F0690971E73F356007AD3E9 /* ThirdViewController.swift in Sources */,
 				2F0690991E73F3E7007AD3E9 /* EarthRocketView.swift in Sources */,
 				2F9BEC3D1E70FC3A00E2B2D5 /* AppDelegate.swift in Sources */,
-				2F06909B1E74255C007AD3E9 /* animationView.swift in Sources */,
+				2F06909B1E74255C007AD3E9 /* AnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
