@@ -140,3 +140,26 @@ must with a game.
   - CoreGraphic
   - Foundation
 - Revision History
+
+### Content Hierarchy
+
+- Yang Li's WWDC17 Apply.playgroundbook
+  - Contents
+    - Manifest.plist
+    - Resources
+      - Ball.png
+    - Sources
+      - PlaygroundAPI
+        - .swift
+      - PlaygroundInternal
+        - Setup.swift
+    - Chapters
+      - Mechanics.playgroundchapter
+        - Manifest.plist
+        - Resources
+        - Sources
+        - Contents.swift
+        - LiveView.swift
+      - Mechanics.cutscenepage
+        - .html
+        - .hyperesources(css/js)
