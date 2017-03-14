@@ -16,8 +16,10 @@ class SecondViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let pisaTower = UIImageView(frame: CGRect(x: 633, y: 175, width: 391, height: 1191))
-    pisaTower.image = UIImage(named: "PisaTower")
+//    let pisaTower = UIImageView(frame: CGRect(x: 633, y: 175, width: 391, height: 1191))
+    let pisaTower = UIImageView(frame: self.view.bounds)
+    pisaTower.image = UIImage(named: "PisaTower5")
+    pisaTower.alpha = 0.8
     pisaTower.contentMode = .scaleAspectFill
     self.view.addSubview(pisaTower)
     
@@ -31,7 +33,6 @@ class SecondViewController: UIViewController {
     
     
     ballGravityFall()
-    // Do any additional setup after loading the view.
   }
   
   func ballGravityFall() {
