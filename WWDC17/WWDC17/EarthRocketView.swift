@@ -10,15 +10,17 @@ import UIKit
 
 public class EarthRocketView: UIView {
   var earthAngle: Double = 0.0
-  var angle: Double = 10.0
+  var rocketAngle: Double = 10.0
+//  var moonAngle: Double = 5.0
   var imageViewRocket: UIImageView!
   var imageViewEarth: UIImageView!
   var imageViewMoon: UIImageView!
-  var imageArray : NSMutableArray = []
-  var value : NSInteger = 1
+  var imageArray: NSMutableArray = []
+  var value: NSInteger = 1
   
-  var earthSpeed : CGFloat = 1.0
-  var rocketSpeed : CGFloat = 2.0
+  var earthSpeed: CGFloat = 1.0
+  var rocketSpeed: CGFloat = 2.0
+//  var moonSpeed: CGFloat = 1.5
   
   override init(frame : CGRect) {
     super.init(frame: frame)
@@ -55,10 +57,15 @@ public class EarthRocketView: UIView {
     UIView.setAnimationDelegate(self)
     UIView.setAnimationDidStop(#selector(endAnimationRocket))
     
-    imageViewMoon.transform = CGAffineTransform(rotationAngle: CGFloat(angle * (Double.pi / 180.0)))
+    imageViewMoon.transform = CGAffineTransform(rotationAngle: CGFloat(rocketAngle * (Double.pi / 180.0)))
     imageViewMoon.layer.anchorPoint = CGPoint(x: 5, y: 0.5)
     UIView.commitAnimations()
   }
+  
+//  func endAnimationMoon() {
+//    moonAngle = moonAngle + Double(5 * moonSpeed)
+//    self.startAnimationMoon()
+//  }
   
   func startAnimationRocket() {
     if value >= 3 {
@@ -73,13 +80,13 @@ public class EarthRocketView: UIView {
     UIView.setAnimationDelegate(self)
     UIView.setAnimationDidStop(#selector(endAnimationRocket))
     
-    imageViewRocket.transform = CGAffineTransform(rotationAngle: CGFloat(angle * (Double.pi / 180.0)))
+    imageViewRocket.transform = CGAffineTransform(rotationAngle: CGFloat(rocketAngle * (Double.pi / 180.0)))
     imageViewRocket.layer.anchorPoint = CGPoint(x: 5, y: 0.5)
     UIView.commitAnimations()
   }
   
   func endAnimationRocket() {
-    angle = angle + Double(5 * rocketSpeed)
+    rocketAngle = rocketAngle + Double(5 * rocketSpeed)
     self.startAnimationRocket()
   }
   
