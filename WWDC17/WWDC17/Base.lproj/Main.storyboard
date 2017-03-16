@@ -31,18 +31,6 @@
                                     <action selector="dragOutside:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="Y3w-06-Lez"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stake1" translatesAutoresizingMaskIntoConstraints="NO" id="OTE-gk-z6V">
-                                <rect key="frame" x="98" y="123" width="100" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stack2" translatesAutoresizingMaskIntoConstraints="NO" id="7K9-GL-uiU">
-                                <rect key="frame" x="818" y="151" width="100" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gate" translatesAutoresizingMaskIntoConstraints="NO" id="KsQ-ZM-lZK">
-                                <rect key="frame" x="387" y="1196" width="250" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -53,6 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="70.8984375" y="44.802342606149338"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="4Mb-pu-bh4">
@@ -93,8 +82,5 @@
     </scenes>
     <resources>
         <image name="ball" width="305" height="309"/>
-        <image name="gate" width="186" height="99"/>
-        <image name="stack2" width="450" height="278"/>
-        <image name="stake1" width="383" height="344"/>
     </resources>
 </document>

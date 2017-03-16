@@ -11,8 +11,8 @@ import UIKit
 class SecondViewController: UIViewController {
   var dynamicAnimator = UIDynamicAnimator()
   var gravitationalAcceleration = 2.0
-  let football = UIImageView(frame: CGRect(x: 209, y: 311, width: 128, height: 128))
-  let baseball = UIImageView(frame: CGRect(x: 72, y: 359, width: 80, height: 80))
+  let football = UIImageView(frame: CGRect(x: 700, y: 311, width: 128, height: 128))
+  let baseball = UIImageView(frame: CGRect(x: 900, y: 359, width: 80, height: 80))
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -42,4 +42,7 @@ class SecondViewController: UIViewController {
     dynamicAnimator.addBehavior(gravityBehavior)
   }
   
+  func showFallDetail() {
+    
+  }
 }
