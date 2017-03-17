@@ -11,7 +11,6 @@ import UIKit
 class FirstViewController: UIViewController {
   var dynamicAnimator = UIDynamicAnimator()
   let steelballView = UIImageView()
-  let bezierPath = UIBezierPath()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,22 +19,6 @@ class FirstViewController: UIViewController {
     self.view.addSubview(steelballView)
     ballPendulum()
 
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    let shapelayer = CAShapeLayer()
-    shapelayer.frame = self.view.bounds
-    
-    bezierPath.move(to: CGPoint(x: 200, y: 200))
-    bezierPath.addLine(to: CGPoint(x: 432, y: 715))
-    
-    
-//    bezierPath.addLine(to: CGPoint(x: steelballView.center.x, y: steelballView.center.y))
-//    bezierPath.removeAllPoints()
-    bezierPath.lineWidth = 20
-    shapelayer.path = bezierPath.cgPath
-    self.view.layer.addSublayer(shapelayer)
-    
   }
   
   func ballPendulum() {
@@ -49,6 +32,5 @@ class FirstViewController: UIViewController {
     view.addSubview(nailView)
     dynamicAnimator.addBehavior(attachmentBehavior)
   }
-  
-  
+
 }

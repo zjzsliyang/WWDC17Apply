@@ -52,7 +52,7 @@ must with a game.
 
 ## Issues
 
-- What's **live view**
+- Foucault pendulum implement 
 
 ## Notes
 
