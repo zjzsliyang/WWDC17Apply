@@ -40,6 +40,9 @@ class SecondViewController: UIViewController {
     let gravityBehavior = UIGravityBehavior(items: [self.baseball, self.football])
     gravityBehavior.magnitude = CGFloat(gravitationalAcceleration)
     dynamicAnimator.addBehavior(gravityBehavior)
+    let collisionBehavior = UICollisionBehavior(items: [self.baseball, self.football])
+    collisionBehavior.translatesReferenceBoundsIntoBoundary = true
+    dynamicAnimator.addBehavior(collisionBehavior)
   }
   
   func showFallDetail() {

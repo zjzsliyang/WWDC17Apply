@@ -8,47 +8,47 @@
 
 import UIKit
 
-var times = 0
-
 class FirstViewController: UIViewController {
-  let ballButton = UIButton(frame: CGRect(x: 462, y: 633, width: 100, height: 100))
-  var ballIsPressed = false
   var dynamicAnimator = UIDynamicAnimator()
-
+  let steelballView = UIImageView()
+  let bezierPath = UIBezierPath()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = UIColor(red: 242/255, green: 232/255, blue: 219/255, alpha: 1)
-    ballButton.setImage(UIImage(named: "ball"), for: .normal)
-    view.addSubview(ballButton)
+    steelballView.image = UIImage(named: "steelball")
+    steelballView.frame = CGRect(x: 432, y: 715, width: 100, height: 100)
+    self.view.addSubview(steelballView)
+    ballPendulum()
+
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    ballButton.center = CGPoint(x: view.center.x, y: view.center.y)
-    let stack1View = UIImageView(image: UIImage(named: "stake1"))
-    let stack2View = UIImageView(image: UIImage(named: "stake2"))
-    let gateView = UIImageView(image: UIImage(named: "gate"))
-    stack1View.frame = CGRect(x: 818, y: 123, width: 100, height: 90)
-    stack2View.frame = CGRect(x: 98, y: 151, width: 100, height: 62)
-    gateView.frame = CGRect(x: 387, y: 1196, width: 250, height: 133)
-    self.view.addSubview(stack1View)
-    self.view.addSubview(stack2View)
-    self.view.addSubview(gateView)
+    let shapelayer = CAShapeLayer()
+    shapelayer.frame = self.view.bounds
     
-    ballButton.addTarget(self, action: #selector(ballGravityFall), for: .touchUpInside)
-    ballButton.addTarget(self, action: #selector(ballDragOutside), for: .touchDragOutside)
+    bezierPath.move(to: CGPoint(x: 200, y: 200))
+    bezierPath.addLine(to: CGPoint(x: 432, y: 715))
+    
+    
+//    bezierPath.addLine(to: CGPoint(x: steelballView.center.x, y: steelballView.center.y))
+//    bezierPath.removeAllPoints()
+    bezierPath.lineWidth = 20
+    shapelayer.path = bezierPath.cgPath
+    self.view.layer.addSublayer(shapelayer)
+    
   }
   
-  func ballDragOutside() {
-    times = times + 1
-    print(times)
-  }
-  
-  func ballGravityFall() {
-    dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
-    let gravityBehavior = UIGravityBehavior(items: [self.ballButton])
-    gravityBehavior.magnitude = 2
+  func ballPendulum() {
+    dynamicAnimator = UIDynamicAnimator(referenceView: view)
+    let gravityBehavior = UIGravityBehavior(items: [steelballView])
     dynamicAnimator.addBehavior(gravityBehavior)
+    let attachmentBehavior = UIAttachmentBehavior(item: steelballView, attachedToAnchor: CGPoint(x: 200, y: 200))
+    
+    let nailView = UIImageView(image: UIImage(named: "nail"))
+    nailView.frame = CGRect(x: 200, y: 200, width: 30, height: 30)
+    view.addSubview(nailView)
+    dynamicAnimator.addBehavior(attachmentBehavior)
   }
-
+  
+  
 }
