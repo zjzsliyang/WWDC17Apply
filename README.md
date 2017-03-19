@@ -36,119 +36,26 @@ a Swift Playgrounds Project applying for WWDC17
 [WWDC Video](https://developer.apple.com/videos/play/wwdc2016/408/)
 
 
-## Project
+## Idea
 
-The primary idea is to build a PlaygroundBook.
+- build a PlaygroundBook to teach students some physical knowledge
+- better within games
 
-to teach the student learn something.
 
-must with a game.
-
-- 具体想法：
+- Implements
   - 重力(比萨斜塔实验)
   - 万有引力(火箭、月球绕地运动)
-  - 弹力(胡克定律)
+  - 最速降线
   - 单摆(傅科摆)
+  - 弹性碰撞
 
-## Issues
+## Project
 
-- Foucault pendulum implement 
-
-## Notes
-
-- Playground Book Package
-  - Content Hierarchy
-  - Folder Name Extensions
-    - .playgroundbook
-    - .playgroundchapter
-    - .playgroundpage
-    - .cutscenepage
-  - Folders in the Package Structure
-    - Contents
-    - Chapters
+- Chapters 
+  - Physical.playgroundchapter
     - Pages
-  - Shared Folders
-    - Resources
-    - Sources
-  - Specially Named Files
-    - Manifest.plist
-    - Contents.swift
-    - LiveView.swift
-- Manifest Files
-  - Book Manifest
-    - Chapters Key
-    - ContentIdenrifier Key
-    - ContentVersion Key
-    - DeploymentTarget Key
-    - ImageReference Key
-      - .png file and in *Resources* folder
-      - 4:3 image & 400*300 pixels image size
-    - Name Key
-    - Version Key
-    - SwiftVersion Key
-  - Chapter Manifest
-    - Name Key
-    - Page Key
-  - Cutscene Page Manifest
-    - CotsceneReference
-    - Name
-  - Playground Page Manifest
-    - Hints
-    - LiveViewEdgeToEdge
-    - LiveViewMode
-    - Name
-    - PlaygroundLoggingMode
-    - PosterReference
-    - CodeCopySetup
-- Playground Page Delimiters
-  - About Page Markup Delimiters
-  - Editable Areas
-  - Placeholder Tokens
-  - Hidden Code
-  - Customized Code Completion
-- Glossary
-  - Glossary Property List
-    - Terms
-    - Term Name
-  - Linking to Terms
-- PlaygroundSupportModule
-  - Access a playground page and manage its execution
-  - Display and dismiss live views
-  - Share and access persistent data
-  - Send and receive messages between playgrounds and live views
-  - Set and get the learning progress of the user, update hints, and show success text.
-- Available Frameworks
-  - math(Accelerate)
-  - audio
-  - video
-  - image
-  - Network
-  - Bluetooth
-  - CoreData
-  - CoreFoundation
-  - CoreGraphic
-  - Foundation
-- Revision History
-
-### Content Hierarchy
-
-- Yang Li's WWDC17 Apply.playgroundbook
-  - Contents
-    - Manifest.plist
-    - Resources
-      - Ball.png
-    - Sources
-      - PlaygroundAPI
-        - .swift
-      - PlaygroundInternal
-        - Setup.swift
-    - Chapters
-      - Mechanics.playgroundchapter
-        - Manifest.plist
-        - Resources
-        - Sources
-        - Contents.swift
-        - LiveView.swift
-      - Mechanics.cutscenepage
-        - .html
-        - .hyperesources(css/js)
+      - Freefall(自由落体)
+      - Brachistochrone(最速降线)
+      - CircularMotion(圆周运动)
+      - Pendulum(单摆)
+      - ElasticCollision(弹性碰撞)
