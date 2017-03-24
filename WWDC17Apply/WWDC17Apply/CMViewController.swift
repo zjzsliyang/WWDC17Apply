@@ -9,7 +9,6 @@
 import UIKit
 
 class CMViewController: UIViewController {
-
   override func viewDidLoad() {
     super.viewDidLoad()
     let backgroundView = UIImageView(frame: self.view.bounds)
@@ -20,6 +19,5 @@ class CMViewController: UIViewController {
     let animationView = CMAnimationView(frame: self.view.bounds)
     self.view.addSubview(animationView)
   }
-  
 }
 

@@ -14,6 +14,7 @@
 		2F2A12D31E7EA4E4005A49EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F2A12D11E7EA4E4005A49EA /* LaunchScreen.storyboard */; };
 		2F2A12DB1E7EA9A5005A49EA /* CMAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A12DA1E7EA9A5005A49EA /* CMAnimationView.swift */; };
 		2F2A12DD1E7EA9EA005A49EA /* CMObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A12DC1E7EA9EA005A49EA /* CMObjectView.swift */; };
+		2F4CC3D51E85531E001A2CDA /* ElasticCollisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4CC3D41E85531E001A2CDA /* ElasticCollisionViewController.swift */; };
 		2FBC18DF1E7EB89B004F8C83 /* BrachistochroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC18DE1E7EB89B004F8C83 /* BrachistochroneViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		2F2A12D41E7EA4E4005A49EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F2A12DA1E7EA9A5005A49EA /* CMAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMAnimationView.swift; sourceTree = "<group>"; };
 		2F2A12DC1E7EA9EA005A49EA /* CMObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMObjectView.swift; sourceTree = "<group>"; };
+		2F4CC3D41E85531E001A2CDA /* ElasticCollisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticCollisionViewController.swift; sourceTree = "<group>"; };
 		2FBC18DE1E7EB89B004F8C83 /* BrachistochroneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrachistochroneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 			children = (
 				2F2A12C81E7EA4E4005A49EA /* AppDelegate.swift */,
 				2FBC18DE1E7EB89B004F8C83 /* BrachistochroneViewController.swift */,
+				2F4CC3D41E85531E001A2CDA /* ElasticCollisionViewController.swift */,
 				2F2A12DE1E7EA9F1005A49EA /* CircularMotionView */,
 				2F2A12CC1E7EA4E4005A49EA /* Main.storyboard */,
 				2F2A12CF1E7EA4E4005A49EA /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 				2F2A12CB1E7EA4E4005A49EA /* CMViewController.swift in Sources */,
 				2F2A12C91E7EA4E4005A49EA /* AppDelegate.swift in Sources */,
 				2FBC18DF1E7EB89B004F8C83 /* BrachistochroneViewController.swift in Sources */,
+				2F4CC3D51E85531E001A2CDA /* ElasticCollisionViewController.swift in Sources */,
 				2F2A12DB1E7EA9A5005A49EA /* CMAnimationView.swift in Sources */,
 				2F2A12DD1E7EA9EA005A49EA /* CMObjectView.swift in Sources */,
 			);
