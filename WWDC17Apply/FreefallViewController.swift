@@ -47,13 +47,23 @@ class FreefallViewController: UIViewController {
     
   }
   
+  /* TODO
+   1. 优化DetailView 扁平化UI
+   2. DetailView出现动画
+  */
+ 
   func generateCardView() {
     cardView.layer.cornerRadius = 20
-    cardView.backgroundColor = UIColor.lightGray
+    cardView.backgroundColor = UIColor(red: 206 / 255, green: 210 / 255, blue: 212 / 255, alpha: 1)
     
     let cardBaseball = UIImageView(image: UIImage(named: "baseball"))
     cardBaseball.frame = CGRect(x: 20, y: -40, width: 80, height: 80)
     cardView.addSubview(cardBaseball)
+    
+    let baseballDetail = UITextView(frame: CGRect(x: 30, y: 30, width: 100, height: 100))
+    baseballDetail.text = String("Hello")
+    baseballDetail.textColor = UIColor(red: 75 / 255, green: 212 / 255, blue: 167 / 255, alpha: 1)
+    cardView.addSubview(baseballDetail)
     
     let cardSteelball = UIImageView(image: UIImage(named: "steelball"))
     cardSteelball.frame = CGRect(x: 20, y: -40, width: 80, height: 80)
