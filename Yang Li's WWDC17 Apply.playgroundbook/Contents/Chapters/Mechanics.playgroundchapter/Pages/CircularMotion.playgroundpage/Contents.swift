@@ -13,10 +13,7 @@
 import UIKit
 import PlaygroundSupport
 
-let viewController = UIViewController()
-let animationView = AnimationView(frame: viewController.view.bounds)
-viewController.view = animationView
-PlaygroundPage.current.liveView = viewController
-
-viewController.view.addSubview(animationView)
-animationView.animationSpeed(earthSpeeds: 1.0, rocketSpeeds: 2.0)
+let CMViewController = UIViewController()
+let animationView = CMAnimationView(frame: CMViewController.view.bounds)
+CMViewController.view = animationView
+PlaygroundPage.current.liveView = CMViewController
