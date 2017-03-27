@@ -129,7 +129,6 @@ public func addBall(index: Int) {
   balls.append(ball)
 }
 
-
 for index in 0..<3 {
   addBall(index: index)
   let startPoint = CGPoint(x: xOffset, y: yOffset)
@@ -152,7 +151,6 @@ for (index, ball) in balls.enumerated() {
 }
 animator.addBehavior(gravity)
 animator.addBehavior(collision)
-
 
 public func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?, at p: CGPoint) {
   let ball = item as! Ball

@@ -11,12 +11,6 @@
 // All rights reserved.
 //
 
-import UIKit
-import PlaygroundSupport
 
-let CMViewController = UIViewController()
-let animationView = CMAnimationView(frame: CMViewController.view.bounds)
-CMViewController.view = animationView
-PlaygroundPage.current.liveView = CMViewController
 
 //#-end-hidden-code
