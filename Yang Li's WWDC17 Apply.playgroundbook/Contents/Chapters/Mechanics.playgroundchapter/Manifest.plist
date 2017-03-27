@@ -5,7 +5,7 @@
 	<key>Version</key>
 	<string>1.0</string>
 	<key>Name</key>
-	<string>Mechanics Chapter</string>
+	<string>Mechanics</string>
 	<key>Pages</key>
 	<array>
 		<string>CircularMotion.playgroundpage</string>
