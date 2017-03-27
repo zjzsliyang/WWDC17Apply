@@ -12,8 +12,8 @@ class FreefallViewController: UIViewController {
   var animator = UIDynamicAnimator()
   var gravitationalAcceleration = 2.0
   
-  let baseball = UIImageView(frame: CGRect(x: 700, y: 311, width: 80, height: 80))
-  let steelball = UIImageView(frame: CGRect(x: 900, y: 359, width: 80, height: 80))
+  let baseball = UIImageView(frame: CGRect(x: 700, y: 300, width: 80, height: 80))
+  let steelball = UIImageView(frame: CGRect(x: 900, y: 300, width: 80, height: 80))
   
   let cardView = UIView(frame: CGRect(x: 100, y: 500, width: 400, height: 200))
   
@@ -39,6 +39,12 @@ class FreefallViewController: UIViewController {
     animator.addBehavior(gravity)
     let collision = UICollisionBehavior(items: [self.baseball, self.steelball])
     collision.translatesReferenceBoundsIntoBoundary = true
+    let baseballElasticity = UIDynamicItemBehavior(items: [self.baseball])
+    baseballElasticity.elasticity = 0.4
+    let steelballElasticity = UIDynamicItemBehavior(items: [self.steelball])
+    steelballElasticity.elasticity = 0.6
+    animator.addBehavior(baseballElasticity)
+    animator.addBehavior(steelballElasticity)
     animator.addBehavior(collision)
   }
   

@@ -54,7 +54,7 @@ a Swift Playgrounds Project applying for WWDC17
 - Chapters 
   - Physical.playgroundchapter
     - Pages
-      - [x] Freefall(自由落体)
+      - [ ] Freefall(自由落体)
       - [x] Brachistochrone(最速降线)
       - [x] CircularMotion(圆周运动)
       - [ ] Pendulum(单摆)
