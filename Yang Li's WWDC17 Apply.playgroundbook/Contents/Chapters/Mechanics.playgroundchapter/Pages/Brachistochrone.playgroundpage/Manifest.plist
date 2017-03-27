@@ -5,11 +5,8 @@
 	<key>Version</key>
 	<string>1.0</string>
 	<key>Name</key>
-	<string>Mechanics Chapter</string>
-	<key>Pages</key>
-	<array>
-		<string>CircularMotion.playgroundpage</string>
-		<string>Brachistochrone.playgroundpage</string>
-	</array>
+	<string>Brachistochrone Page</string>
+	<key>LiveViewMode</key>
+	<string>HiddenByDefault</string>
 </dict>
 </plist>

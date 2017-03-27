@@ -33,15 +33,15 @@ class CMObjectView: UIView {
     self.backgroundColor = UIColor.clear
     imageArray = NSMutableArray.init()
     
-    earthImageView = UIImageView.init(frame: CGRect(x: 31, y: 160, width: 260, height: 260))
+    earthImageView = UIImageView.init(frame: CGRect(x: 231, y: 260, width: 260, height: 260))
     earthImageView.image = UIImage.init(named: "earth")
     self.addSubview(earthImageView)
     
-    rocketImageView = UIImageView.init(frame: CGRect(x: 150, y: 260, width: 30, height: 60))
+    rocketImageView = UIImageView.init(frame: CGRect(x: 350, y: 360, width: 30, height: 60))
     rocketImageView.image = UIImage.init(named: "rocket1")
     self.addSubview(rocketImageView)
     
-    moonImageView = UIImageView.init(frame: CGRect(x: 100, y: 500, width: 100, height: 100))
+    moonImageView = UIImageView.init(frame: CGRect(x: 300, y: 400, width: 80, height: 80))
     moonImageView.image = UIImage.init(named: "moon")
     self.addSubview(moonImageView)
     
@@ -99,7 +99,7 @@ class CMObjectView: UIView {
     UIView.setAnimationDidStop(#selector(endAnimationMoon))
     
     moonImageView.transform = CGAffineTransform(rotationAngle: CGFloat(moonAngle * (Double.pi / 180.0)))
-    moonImageView.layer.anchorPoint = CGPoint(x: 5, y: 0.5)
+    moonImageView.layer.anchorPoint = CGPoint(x: 4, y: 0.5)
     UIView.commitAnimations()
   }
   
