@@ -44,6 +44,7 @@ class BrachistochroneViewController: UIViewController, UICollisionBehaviorDelega
     collision.translatesReferenceBoundsIntoBoundary = true
     collision.collisionDelegate = self
     self.animator = UIDynamicAnimator(referenceView: self.view)
+
   }
   
   override func viewWillAppear(_ animated: Bool) {

@@ -4,8 +4,8 @@
 //  Copyright © 2016,2017 Apple Inc. All rights reserved.
 //
 
-import PlaygroundSupport
 import UIKit
+import PlaygroundSupport
 
 let firstView = UIView()
 let secondView = UIView()
@@ -23,6 +23,10 @@ var yOffset: CGFloat = 50
 let xWidth: CGFloat = 270
 let yHeight: CGFloat = 368 / 3
 let gap: CGFloat = 40
+
+let minScaleLimit: CGFloat = 0.5
+let maxScaleLimit: CGFloat = 4
+
 
 public func initAnimationView() {
   firstView.frame = CGRect(x: 40, y: 34, width: 295, height: 143)
@@ -53,7 +57,7 @@ public func lineIdentifierAt(index: Int) -> NSCopying {
 }
 
 public func ballPositionAtIndex(index: Int) -> CGPoint {
-  var point = CGPoint(x: xOffset + ballSize / 2, y: CGFloat(index) * (yHeight + gap) + 50)
+  var point = CGPoint(x: xOffset + ballSize / 2, y: (CGFloat(index) * (yHeight + gap) + 50))
   if index == 0 {
     point.y -= 7
   }
@@ -95,7 +99,7 @@ public func curvePath2(startPoint: CGPoint, endPoint: CGPoint) -> UIBezierPath {
   let bezierPath = UIBezierPath()
   bezierPath.move(to: startPoint)
   bezierPath.addCurve(to: endPoint, controlPoint1: CGPoint(x: xOffset + 5.0, y: endPoint.y - 5.0), controlPoint2: CGPoint(x: xOffset + 15.0, y: endPoint.y))
-  bezierPath.addCurve(to: startPoint, controlPoint1: CGPoint(x: xOffset + 15.0, y: endPoint.y), controlPoint2: CGPoint(x: xOffset + 5.0, y: endPoint.y - 5))
+  bezierPath.addCurve(to: startPoint, controlPoint1: CGPoint(x: xOffset + 15.0, y: endPoint.y), controlPoint2: CGPoint(x: xOffset + 5.0, y: endPoint.y - 5.0))
   addShapeLayerWithPath(path: bezierPath)
   return bezierPath
 }
@@ -134,7 +138,7 @@ for (index, ball) in balls.enumerated() {
   ball.center = ballPositionAtIndex(index: index)
 }
 
-func startAnimation() {
+public func startAnimation() {
   for (index, ball) in balls.enumerated() {
     ball.center = ballPositionAtIndex(index: index)
     gravity.addItem(ball)

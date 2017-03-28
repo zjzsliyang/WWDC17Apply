@@ -14,6 +14,6 @@
 import UIKit
 import PlaygroundSupport
 
-startAnimation()
+PlaygroundPage.current.liveView.startAnimation()
 
 //#-end-hidden-code
