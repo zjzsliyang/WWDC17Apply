@@ -27,7 +27,7 @@ func launchRocket() {
 /*:
  **Goal:** Launch the rocket🚀 and make it turn around the earth🌏.
  
- Remember the [cosmic velocity](glossary://cosmicVelocity).
+ Remember the [cosmic velocity](glossary://cosmic%20velocity).
  
  There is a related history for your reference: **Newton's cannonball**
  
@@ -46,7 +46,7 @@ func launchRocket() {
  * callout(calculate the square root):
     `sqrt()`
  
- 1. Calculate the rocket speed(km/s) to make it turn around the earth, just the value and the formula with number can both OK👌!
+ 1. Calculate the rocket speed(*km/s*) to make it turn around the earth, just the value and the formula with number can both OK👌!
  
  2. Fire🔥 with the function `launchRocket()` !
  

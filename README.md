@@ -84,5 +84,10 @@ a Swift Playgrounds Project applying for WWDC17
   - https://www.zhihu.com/question/39494645
 
 
+Todo:
 
-Hints:
+CM
+
+- 火箭默认不转
+- 速度错误的提示
+- 手势识别 更改视图
