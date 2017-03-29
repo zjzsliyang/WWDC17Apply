@@ -36,17 +36,19 @@ public class CMObjectView: UIView {
     earthImageView.image = UIImage.init(named: "earth")
     self.addSubview(earthImageView)
     
-    rocketImageView = UIImageView.init(frame: CGRect(x: 350, y: 360, width: 30, height: 60))
-    rocketImageView.image = UIImage.init(named: "rocket1")
-    self.addSubview(rocketImageView)
-    
     moonImageView = UIImageView.init(frame: CGRect(x: 300, y: 400, width: 80, height: 80))
     moonImageView.image = UIImage.init(named: "moon")
     self.addSubview(moonImageView)
     
     self.startAnimationEarth()
-    self.startAnimationRocket()
     self.startAnimationMoon()
+  }
+  
+  public func launchingRocket() {
+    rocketImageView = UIImageView.init(frame: CGRect(x: 350, y: 360, width: 30, height: 60))
+    rocketImageView.image = UIImage.init(named: "rocket1")
+    self.addSubview(rocketImageView)
+    self.startAnimationRocket()
   }
   
   required public init?(coder aDecoder: NSCoder) {

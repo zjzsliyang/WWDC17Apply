@@ -8,6 +8,7 @@
 import UIKit
 
 public class CMAnimationView: UIView {
+  let celestialBodiesView = CMObjectView()
   
   public override init(frame : CGRect) {
     super.init(frame: frame)
@@ -26,7 +27,11 @@ public class CMAnimationView: UIView {
     let displayLink = CADisplayLink(target: self, selector: #selector(setNeedsDisplay(_:) ))
     displayLink.add(to: .main, forMode: .defaultRunLoopMode)
 
-    let celestialBodiesView = CMObjectView(frame: self.bounds)
+    celestialBodiesView.frame = self.bounds
     self.addSubview(celestialBodiesView)
+  }
+  
+  public func launchingRocket2() {
+    celestialBodiesView.launchingRocket()
   }
 }

@@ -4,11 +4,8 @@
 //  Copyright © 2016,2017 Apple Inc. All rights reserved.
 //
 
-import UIKit
 import PlaygroundSupport
 
-let CMViewController = UIViewController()
-let animationView = CMAnimationView(frame: CMViewController.view.bounds)
-CMViewController.view = animationView
+let page = PlaygroundPage.current
 
-PlaygroundPage.current.liveView = CMViewController
+page.liveView = CMViewController()

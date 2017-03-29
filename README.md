@@ -64,8 +64,7 @@ a Swift Playgrounds Project applying for WWDC17
 ## Issue
 
 - Circular Motion
-  - 火箭默认不转
-  - 速度错误的提示
+  - 火箭转起来
   - 手势识别 更改视图
 - Brachistochrone
   - 美化UI

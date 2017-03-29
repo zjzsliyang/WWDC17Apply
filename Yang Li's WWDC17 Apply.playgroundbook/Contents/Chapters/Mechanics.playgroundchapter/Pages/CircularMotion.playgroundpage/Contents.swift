@@ -17,10 +17,17 @@ import PlaygroundSupport
 let page = PlaygroundPage.current
 let proxy = page.liveView as? PlaygroundRemoteLiveViewProxy
 
-var rocketSpeed: CGFloat = 2.0
+var rocketSpeed: CGFloat = 0.0
 
 func launchRocket() {
-  
+  if rocketSpeed < 7.9 {
+    PlaygroundPage.current.assessmentStatus = .fail(hints: ["Oops! The rocket is **falling**! ", "Try a little faster."], solution: "*7.9 - 11.2* can be around the earth")
+  } else if rocketSpeed > 11.2 {
+    PlaygroundPage.current.assessmentStatus = .fail(hints: ["What! It is **far away**!", "Try a little slower."], solution: "*7.9 - 11.2* can be around the earth")
+  } else {
+    proxy?.send(RocketStatus.launch().playgroundValue)
+    PlaygroundPage.current.assessmentStatus = .pass(message: "**Congratulations**!🎉 What a perfect launch!")
+  }
 }
 
 //#-end-hidden-code
