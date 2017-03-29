@@ -25,7 +25,7 @@ func launchRocket() {
   } else if rocketSpeed > 11.2 {
     PlaygroundPage.current.assessmentStatus = .fail(hints: ["What! It is **far away**!", "Try a little slower."], solution: "*7.9 - 11.2* can be around the earth")
   } else {
-    proxy?.send(RocketStatus.launch().playgroundValue)
+    proxy?.send(PlaygroundValue.string("launch"))
     PlaygroundPage.current.assessmentStatus = .pass(message: "**Congratulations**!🎉 What a perfect launch!")
   }
 }
@@ -59,6 +59,7 @@ func launchRocket() {
  
  */
 
+//#-code-completion(everything, hide)
 rocketSpeed = /*#-editable-code*/0.0/*#-end-editable-code*/
 
 launchRocket()
