@@ -1,8 +1,4 @@
 //#-hidden-code
-/*
- Copyright (C) 2016 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information.
- */
 
 // Contents.swift
 // Created by Yang Li on 26/03/2017.
@@ -60,6 +56,7 @@ func launchRocket() {
  */
 
 //#-code-completion(everything, hide)
+//#-code-completion(identifier, show, sqrt())
 rocketSpeed = /*#-editable-code*/0.0/*#-end-editable-code*/
 
 launchRocket()

@@ -1,8 +1,4 @@
 //#-hidden-code
-/*
- Copyright (C) 2016 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information.
- */
 
 // Contents.swift
 // Created by Yang Li on 27/03/2017.

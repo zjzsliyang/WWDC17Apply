@@ -1,7 +1,8 @@
+// LiveView.swift
+// Created by Yang Li on 26/03/2017.
 //
-//  LiveView.swift
-//
-//  Copyright © 2016,2017 Apple Inc. All rights reserved.
+// Copyright © 2017 Yang Li, Tongji University, Shanghai.
+// All rights reserved.
 //
 
 import PlaygroundSupport
