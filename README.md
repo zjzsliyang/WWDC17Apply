@@ -4,6 +4,8 @@
 
 a Swift Playgrounds Project applying for WWDC17
 
+![](Res/logo.png)
+
 [WWDC Scholarships](https://developer.apple.com/wwdc/scholarships/)
 
 - Submissions will be accepted from Monday, March 27, 2017 at 10:00 a.m. PDT until Sunday, April 2, 2017 at 5:00 p.m. PDT. 
@@ -38,11 +40,14 @@ a Swift Playgrounds Project applying for WWDC17
 ## Project
 
 - Chapters 
-  - Physical.playgroundchapter
+  - Mechanics.playgroundchapter
     - Pages
-      - [ ] Freefall(自由落体)
-      - [x] Brachistochrone(最速降线)
-      - [x] CircularMotion(圆周运动)
-      - [ ] Pendulum(单摆)
-      - [ ] ElasticCollision(弹性碰撞)
+      - [ ] Freefall
+      - [x] Brachistochrone
+      - [x] CircularMotion
+      - [ ] Pendulum
+      - [ ] ElasticCollision
+
+
+## Screenshot
 

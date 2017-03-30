@@ -12,6 +12,9 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
   let secondView = UIView()
   let thirdView = UIView()
   let animationView = UIView()
+  let firstPokemonView = UIImageView()
+  let secondPokemonView = UIImageView()
+  let thirdPokemonView = UIImageView()
   
   let gravity = UIGravityBehavior()
   let collision = UICollisionBehavior()
@@ -35,6 +38,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     animationView.frame = self.view.bounds
     self.view.addSubview(animationView)
     initAnimationView()
+    initPokemonView()
     yOffset = 50
     
     for index in 0..<3 {
@@ -190,6 +194,24 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     self.thirdView.layer.borderWidth = 2.0
     self.thirdView.layer.borderColor = UIColor.gray.cgColor
     animationView.addSubview(thirdView)
+  }
+  
+  public func initPokemonView() {
+    setPokemonView()
+    
+    firstPokemonView.frame = CGRect(x: 40 + 295, y: 34, width: 295, height: 143)
+    firstPokemonView.contentMode = .scaleAspectFill
+    animationView.addSubview(firstPokemonView)
+    
+    secondPokemonView.frame = CGRect()
+    
+    
+  }
+  
+  public func setPokemonView() {
+    firstPokemonView.image = UIImage(named: "Pikachu")
+    secondPokemonView.image = UIImage(named: "Bulbasaur")
+    thirdPokemonView.image = UIImage(named: "Charmander")
   }
   
   public func addBall(index: Int) {
