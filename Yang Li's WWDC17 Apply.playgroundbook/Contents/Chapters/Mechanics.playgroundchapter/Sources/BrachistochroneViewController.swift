@@ -180,17 +180,17 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
   }
   
   public func initAnimationView() {
-    self.firstView.frame = CGRect(x: 40, y: 34, width: 295, height: 143)
+    self.firstView.frame = CGRect(x: 40, y: 34, width: 340, height: 143)
     self.firstView.layer.borderWidth = 2.0
     self.firstView.layer.borderColor = UIColor.black.cgColor
     animationView.addSubview(firstView)
     
-    self.secondView.frame = CGRect(x: 40, y: 197, width: 295, height: 143)
+    self.secondView.frame = CGRect(x: 40, y: 197, width: 340, height: 143)
     self.secondView.layer.borderWidth = 2.0
     self.secondView.layer.borderColor = UIColor.gray.cgColor
     animationView.addSubview(secondView)
     
-    self.thirdView.frame = CGRect(x: 40, y: 365, width: 295, height: 143)
+    self.thirdView.frame = CGRect(x: 40, y: 365, width: 340, height: 143)
     self.thirdView.layer.borderWidth = 2.0
     self.thirdView.layer.borderColor = UIColor.gray.cgColor
     animationView.addSubview(thirdView)
@@ -199,13 +199,17 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
   public func initPokemonView() {
     setPokemonView()
     
-    firstPokemonView.frame = CGRect(x: 40 + 295, y: 34, width: 295, height: 143)
+    firstPokemonView.frame = CGRect(x: 40 + 295, y: 34 + 143 - 40, width: 40, height: 40)
     firstPokemonView.contentMode = .scaleAspectFill
     animationView.addSubview(firstPokemonView)
     
-    secondPokemonView.frame = CGRect()
+    secondPokemonView.frame = CGRect(x: 40 + 295, y: 34 + 143 * 2 - 20, width: 40, height: 40)
+    secondPokemonView.contentMode = .scaleAspectFill
+    animationView.addSubview(secondPokemonView)
     
-    
+    thirdPokemonView.frame = CGRect(x: 40 + 295, y: 34 + 143 * 3, width: 40, height: 40)
+    thirdPokemonView.contentMode = .scaleAspectFill
+    animationView.addSubview(thirdPokemonView)
   }
   
   public func setPokemonView() {
