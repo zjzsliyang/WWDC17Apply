@@ -60,9 +60,3 @@ a Swift Playgrounds Project applying for WWDC17
       - [ ] Pendulum(单摆)
       - [ ] ElasticCollision(弹性碰撞)
 
-
-## Issue
-
-- Brachistochrone
-  - 美化UI
-  - 手势识别 更改视图

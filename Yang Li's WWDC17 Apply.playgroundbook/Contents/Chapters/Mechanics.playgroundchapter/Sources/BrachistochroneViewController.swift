@@ -26,7 +26,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
   let yHeight: CGFloat = 368 / 3
   let gap: CGFloat = 40
   
-  let maxScaleLimit: CGFloat = 2.0
+  let maxScaleLimit: CGFloat = 20.0
   let minScaleLimit: CGFloat = 0.5
   var animationViewCumulativeScale: CGFloat = 1.0
   
@@ -172,13 +172,13 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     pathLayer.fillColor = UIColor.clear.cgColor
     pathLayer.strokeColor = UIColor(colorLiteralRed: 242 / 255, green: 123 / 255, blue: 154 / 255, alpha: 1).cgColor
     pathLayer.lineWidth = 2.0
-    self.view.layer.addSublayer(pathLayer)
+    animationView.layer.addSublayer(pathLayer)
   }
   
   public func initAnimationView() {
     self.firstView.frame = CGRect(x: 40, y: 34, width: 295, height: 143)
     self.firstView.layer.borderWidth = 2.0
-    self.firstView.layer.borderColor = UIColor.gray.cgColor
+    self.firstView.layer.borderColor = UIColor.black.cgColor
     animationView.addSubview(firstView)
     
     self.secondView.frame = CGRect(x: 40, y: 197, width: 295, height: 143)
@@ -193,8 +193,9 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
   }
   
   public func addBall(index: Int) {
-    let ball = Ball(image: UIImage(named: "ball"))
+    let ball = Ball(image: UIImage(named: "PokeBall.png"))
     ball.frame = CGRect(x: 0, y: 0, width: ballSize, height: ballSize)
+    ball.contentMode = .scaleAspectFill
     animationView.addSubview(ball)
     self.balls.append(ball)
   }

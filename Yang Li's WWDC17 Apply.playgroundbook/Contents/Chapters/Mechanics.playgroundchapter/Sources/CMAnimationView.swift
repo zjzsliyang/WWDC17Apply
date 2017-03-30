@@ -20,10 +20,6 @@ public class CMAnimationView: UIView {
   }
 
   public func initAnimation() {
-    let backgroundView = UIImageView(frame: self.bounds)
-    backgroundView.image = UIImage(named: "sky.jpg")
-    self.addSubview(backgroundView)
-    
     let displayLink = CADisplayLink(target: self, selector: #selector(setNeedsDisplay(_:) ))
     displayLink.add(to: .main, forMode: .defaultRunLoopMode)
 
