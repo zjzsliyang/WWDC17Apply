@@ -1,6 +1,6 @@
 # WWDC17Apply
 
-![](https://img.shields.io/badge/iOS-10-brightgreen.svg) ![](https://img.shields.io/badge/Swift%20Playgrounds-1.0%20or%20later-orange.svg)
+![](https://img.shields.io/badge/iOS-10-brightgreen.svg) ![](https://img.shields.io/badge/Swift-3.0-blue.svg) ![](https://img.shields.io/badge/Swift%20Playgrounds-1.0%20or%20later-orange.svg) ![](https://img.shields.io/badge/platform-iPad-lightgrey.svg)
 
 a Swift Playgrounds Project applying for WWDC17
 
@@ -34,20 +34,6 @@ a Swift Playgrounds Project applying for WWDC17
 [Playground Book](https://developer.apple.com/library/prerelease/content/documentation/Xcode/Conceptual/swift_playgrounds_doc_format/index.html#//apple_ref/doc/uid/TP40017343-CH47-SW4)
 
 [WWDC Video](https://developer.apple.com/videos/play/wwdc2016/408/)
-
-
-## Idea
-
-- build a PlaygroundBook to teach students some physical knowledge
-- better within games
-
-
-- Implements
-  - 重力(比萨斜塔实验)
-  - 万有引力(火箭、月球绕地运动)
-  - 最速降线
-  - 单摆(傅科摆)
-  - 弹性碰撞
 
 ## Project
 
