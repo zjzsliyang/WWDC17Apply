@@ -8,6 +8,7 @@
 import UIKit
 
 public class BrachistochroneViewController: UIViewController, UICollisionBehaviorDelegate {
+  let backgroundView = UIImageView()
   let firstView = UIView()
   let secondView = UIView()
   let thirdView = UIView()
@@ -37,7 +38,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     super.viewDidLoad()
     animationView.frame = self.view.bounds
     self.view.addSubview(animationView)
-    initAnimationView()
+    initContainerView()
     initPokemonView()
     yOffset = 50
     
@@ -179,10 +180,14 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     animationView.layer.addSublayer(pathLayer)
   }
   
-  public func initAnimationView() {
-    self.firstView.frame = CGRect(x: 40, y: 34, width: 340, height: 143)
+  public func initContainerView() {
+    backgroundView.frame = CGRect(x: -29, y: -60, width: 453, height: 911)
+    backgroundView.image = UIImage(named: "GameBoy")
+    animationView.addSubview(backgroundView)
+    
+    firstView.frame = CGRect(x: 40, y: 34, width: 340, height: 143)
     self.firstView.layer.borderWidth = 2.0
-    self.firstView.layer.borderColor = UIColor.black.cgColor
+    self.firstView.layer.borderColor = UIColor.gray.cgColor
     animationView.addSubview(firstView)
     
     self.secondView.frame = CGRect(x: 40, y: 197, width: 340, height: 143)
