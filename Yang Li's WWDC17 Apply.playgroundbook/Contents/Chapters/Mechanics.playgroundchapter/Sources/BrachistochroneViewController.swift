@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import PlaygroundSupport
 
 public class BrachistochroneViewController: UIViewController, UICollisionBehaviorDelegate {
+  let pokemon = ["Abra", "Bellsprout", "Bulbasaur", "Caterpie", "Charmander", "Dratini", "Eevee", "Jigglypuff", "Mankey", "Meowth", "Mew", "Pidgey", "Pikachu", "Psyduck", "Rattata", "Snorlax", "Squirtle", "Venonat", "Weedle", "Zubat"]
+  
   let backgroundView = UIImageView()
   let firstView = UIView()
   let secondView = UIView()
@@ -39,6 +42,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     animationView.frame = self.view.bounds
     self.view.addSubview(animationView)
     initContainerView()
+    setPokemonView()
     initPokemonView()
     yOffset = 50
     
@@ -175,7 +179,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     let pathLayer = CAShapeLayer()
     pathLayer.path = path.cgPath
     pathLayer.fillColor = UIColor.clear.cgColor
-    pathLayer.strokeColor = UIColor(colorLiteralRed: 242 / 255, green: 123 / 255, blue: 154 / 255, alpha: 1).cgColor
+    pathLayer.strokeColor = UIColor.gray.cgColor
     pathLayer.lineWidth = 2.0
     animationView.layer.addSublayer(pathLayer)
   }
@@ -202,8 +206,6 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
   }
   
   public func initPokemonView() {
-    setPokemonView()
-    
     firstPokemonView.frame = CGRect(x: 40 + 295, y: 34 + 143 - 40, width: 40, height: 40)
     firstPokemonView.contentMode = .scaleAspectFill
     animationView.addSubview(firstPokemonView)
@@ -217,10 +219,14 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     animationView.addSubview(thirdPokemonView)
   }
   
-  public func setPokemonView() {
-    firstPokemonView.image = UIImage(named: "Pikachu")
-    secondPokemonView.image = UIImage(named: "Bulbasaur")
-    thirdPokemonView.image = UIImage(named: "Charmander")
+  public func setPokemonView(first: String = "Pikachu", second: String = "Bulbasaur", third: String = "Charmander") {
+    firstPokemonView.image = UIImage(named: first)
+    secondPokemonView.image = UIImage(named: second)
+    thirdPokemonView.image = UIImage(named: third)
+  }
+  
+  public func randomPokemon() {
+    setPokemonView(first: pokemon[Int(arc4random() % 20)], second: pokemon[Int(arc4random() % 20)], third: pokemon[Int(arc4random() % 20)])
   }
   
   public func addBall(index: Int) {
@@ -229,5 +235,12 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     ball.contentMode = .scaleAspectFill
     animationView.addSubview(ball)
     self.balls.append(ball)
+  }
+}
+
+extension BrachistochroneViewController: PlaygroundLiveViewMessageHandler {
+  public func receive(_ message: PlaygroundValue) {
+    randomPokemon()
+    initPokemonView()
   }
 }

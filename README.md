@@ -51,3 +51,6 @@ a Swift Playgrounds Project applying for WWDC17
 
 ## Screenshot
 
+![](Res/Screenshot1.jpg)
+
+![](Res/Screenshot2.jpg)

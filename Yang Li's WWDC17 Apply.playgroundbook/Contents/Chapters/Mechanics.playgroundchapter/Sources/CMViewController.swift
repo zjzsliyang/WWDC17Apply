@@ -69,7 +69,7 @@ public class CMViewController: UIViewController {
 
 }
 
-extension CMViewController: PlaygroundLiveViewMessageHandler{
+extension CMViewController: PlaygroundLiveViewMessageHandler {
   public func receive(_ message: PlaygroundValue) {
     animationView.launchingRocket2()
   }

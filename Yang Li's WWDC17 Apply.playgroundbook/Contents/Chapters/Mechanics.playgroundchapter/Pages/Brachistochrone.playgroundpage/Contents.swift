@@ -11,8 +11,13 @@ import UIKit
 import PlaygroundSupport
 
 let page = PlaygroundPage.current
+let proxy = page.liveView as? PlaygroundRemoteLiveViewProxy
 
 page.liveView = BrachistochroneViewController()
+
+func RandomCatchIt() {
+  proxy?.send(PlaygroundValue.string("RandomCatchIt"))
+}
 
 //#-end-hidden-code
 /*:
@@ -40,6 +45,6 @@ page.liveView = BrachistochroneViewController()
 
 // Try to run it!
 
-
+RandomCatchIt()
 // and then draw a path yourself!
 //#-end-editable-code
