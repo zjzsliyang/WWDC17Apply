@@ -21,7 +21,7 @@ func RandomCatchIt() {
 
 //#-end-hidden-code
 /*:
- After our rocket was launched, let's see something more!
+ After our rocket was launched, let's do something more!
  
  We already known that *The nearest distance between two points is always a straight line*! 
  
@@ -45,6 +45,7 @@ func RandomCatchIt() {
 
 // Try to run it!
 
-RandomCatchIt()
-// and then draw a path yourself!
+//#-code-completion(identifier, show, RandomCatchIt())
+
+// and then catch one randoly by yourself!
 //#-end-editable-code
