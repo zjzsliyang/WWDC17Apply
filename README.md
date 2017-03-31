@@ -1,10 +1,10 @@
 # WWDC17Apply
 
-![](https://img.shields.io/badge/iOS-10-brightgreen.svg) ![](https://img.shields.io/badge/Swift-3.0-blue.svg) ![](https://img.shields.io/badge/Swift%20Playgrounds-1.0%20or%20later-orange.svg) ![](https://img.shields.io/badge/platform-iPad-lightgrey.svg)
+![iOS version](https://img.shields.io/badge/iOS-10-brightgreen.svg) ![Swift version](https://img.shields.io/badge/Swift-3.0-blue.svg) ![Playgrounds version](https://img.shields.io/badge/Swift%20Playgrounds-1.0%20or%20later-orange.svg) ![supported platform](https://img.shields.io/badge/platform-iPad-lightgrey.svg)
 
 a Swift Playgrounds Project applying for WWDC17
 
-![](Res/logo.png)
+![WWDC17 logo](Res/logo.png)
 
 [WWDC Scholarships](https://developer.apple.com/wwdc/scholarships/)
 
@@ -49,8 +49,18 @@ a Swift Playgrounds Project applying for WWDC17
       - [ ] ElasticCollision
 
 
+## Description
+
+> Tell us about the features and technologies you used in your Swift playground.
+
+#### Technologies
+
+Swift, UIKit, Gesture Recognizer. 
+
+
+
 ## Screenshot
 
-![](Res/Screenshot1.jpg)
+![Launch your Rocket](Res/Screenshot1.jpg)
 
-![](Res/Screenshot2.jpg)
+![Catch your Pokémon](Res/Screenshot2.jpg)
