@@ -42,7 +42,6 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     let bgView = UIImageView()
     bgView.frame = self.view.bounds
     bgView.image = UIImage(named: "bg.jpg")
-    bgView.alpha = 0.8
     bgView.contentMode = .scaleAspectFill
     self.view.addSubview(bgView)
     animationView.frame = self.view.bounds

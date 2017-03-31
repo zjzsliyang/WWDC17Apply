@@ -54,7 +54,6 @@ func launchRocket() {
  2. Fire🔥 with the function `launchRocket()` !
  
  */
-
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, show, sqrt())
 rocketSpeed = /*#-editable-code*/0.0/*#-end-editable-code*/
