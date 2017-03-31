@@ -15,13 +15,17 @@ let proxy = page.liveView as? PlaygroundRemoteLiveViewProxy
 
 page.liveView = BrachistochroneViewController()
 
-func RandomCatchIt() {
-  proxy?.send(PlaygroundValue.string("RandomCatchIt"))
+func randomPokemon() {
+  proxy?.send(PlaygroundValue.string("randomPokemon"))
+}
+
+func catchIt() {
+  proxy?.send(PlaygroundValue.string("catchIt"))
 }
 
 //#-end-hidden-code
 /*:
- After our rocket was launched, let's do something more!
+ After our rocket was launched, let's catch our first Pokemon!
  
  We already known that *The nearest distance between two points is always a straight line*! 
  
@@ -44,6 +48,8 @@ func RandomCatchIt() {
 //#-editable-code
 
 // Try to run it!
+
+catchIt()
 
 //#-code-completion(identifier, show, RandomCatchIt())
 

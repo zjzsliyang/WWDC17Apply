@@ -42,6 +42,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     let bgView = UIImageView()
     bgView.frame = self.view.bounds
     bgView.image = UIImage(named: "bg.jpg")
+    bgView.alpha = 0.8
     bgView.contentMode = .scaleAspectFill
     self.view.addSubview(bgView)
     animationView.frame = self.view.bounds
@@ -60,7 +61,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
       collision.addBoundary(withIdentifier: self.lineIdentifierAt(index: index) as NSCopying, from: CGPoint(x: endPoint.x, y: startPoint.y), to: endPoint)
       yOffset += gap + yHeight
     }
-    
+
     collision.translatesReferenceBoundsIntoBoundary = true
     collision.collisionDelegate = self
     self.animator = UIDynamicAnimator(referenceView: self.view)
@@ -69,14 +70,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
   
   override public func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    for (index, ball) in balls.enumerated() {
-      ball.center = self.ballPositionAtIndex(index: index)
-      self.gravity.addItem(ball)
-      self.collision.addItem(ball)
-    }
-    self.animator.addBehavior(gravity)
-    self.animator.addBehavior(collision)
-    
+    startAnimation()
     let pinchGesture = UIPinchGestureRecognizer(target: self,
                                                 action: #selector(zoom(gestureRecognizer:)))
     animationView.addGestureRecognizer(pinchGesture)
@@ -84,6 +78,16 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     let panGesture = UIPanGestureRecognizer(target: self,
                                             action: #selector(pan(gestureRecognizer:)))
     animationView.addGestureRecognizer(panGesture)
+  }
+  
+  func startAnimation() {
+    for (index, ball) in balls.enumerated() {
+      ball.center = self.ballPositionAtIndex(index: index)
+      self.gravity.addItem(ball)
+      self.collision.addItem(ball)
+    }
+    self.animator.addBehavior(gravity)
+    self.animator.addBehavior(collision)
   }
   
   func zoom(gestureRecognizer: UIPinchGestureRecognizer) {
@@ -224,7 +228,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     animationView.addSubview(thirdPokemonView)
   }
   
-  public func setPokemonView(first: String = "Pikachu", second: String = "Bulbasaur", third: String = "Charmander") {
+  public func setPokemonView(first: String = "Bulbasaur", second: String = "Pikachu", third: String = "Charmander") {
     firstPokemonView.image = UIImage(named: first)
     secondPokemonView.image = UIImage(named: second)
     thirdPokemonView.image = UIImage(named: third)
@@ -247,5 +251,6 @@ extension BrachistochroneViewController: PlaygroundLiveViewMessageHandler {
   public func receive(_ message: PlaygroundValue) {
     randomPokemon()
     initPokemonView()
+    startAnimation()
   }
 }

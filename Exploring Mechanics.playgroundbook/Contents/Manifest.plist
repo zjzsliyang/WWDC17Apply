@@ -11,7 +11,7 @@
 	<key>Name</key>
 	<string>Mechanics</string>
 	<key>ContentIdentifier</key>
-	<string>com.zjzsliyang.playgroundbook.Mechanics</string>
+	<string>com.zjzsliyang.playgroundbook.ExploringMechanics</string>
 	<key>DeploymentTarget</key>
 	<string>ios10.0</string>
 	<key>Chapters</key>
