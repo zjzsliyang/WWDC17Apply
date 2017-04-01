@@ -7,10 +7,12 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 import PlaygroundSupport
 
-public class CMViewController: UIViewController {
+public class CMViewController: UIViewController, CLLocationManagerDelegate {
   var audioPlayer: AVAudioPlayer!
+  var locationManager = CLLocationManager()
   
   let maxScaleLimit: CGFloat = 2.0
   let minScaleLimit: CGFloat = 0.5
@@ -42,8 +44,6 @@ public class CMViewController: UIViewController {
     
     animationView.frame = self.view.bounds
     self.view.addSubview(animationView)
-    
-    playBgMusic()
   }
   
   func zoom(gestureRecognizer: UIPinchGestureRecognizer) {
@@ -81,10 +81,33 @@ public class CMViewController: UIViewController {
     audioPlayer.prepareToPlay()
     audioPlayer.play()
   }
+  
+  func loadLocation() {
+    locationManager.delegate = self
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    locationManager.requestAlwaysAuthorization()
+    locationManager.requestWhenInUseAuthorization()
+    locationManager.startUpdatingLocation()
+  }
+  
+  public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    let location: CLLocation = locations[locations.count - 1]
+    var currLocation = locations.last!
+    let geocoder = CLGeocoder()
+    geocoder.reverseGeocodeLocation(currLocation) { (placemark, error) in
+      if error == nil {
+        let array = placemark! as NSArray
+        let mark = array.firstObject as! CLPlacemark
+        var city: String = (mark.addressDictionary! as NSDictionary).value(forKey: "City") as! String
+      }
+    }
+  }
 }
 
 extension CMViewController: PlaygroundLiveViewMessageHandler {
   public func receive(_ message: PlaygroundValue) {
     animationView.launchingRocket2()
+    loadLocation()
+    playBgMusic()
   }
 }
