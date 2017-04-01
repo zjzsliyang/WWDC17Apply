@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import AVFoundation
 import PlaygroundSupport
 
 public class CMViewController: UIViewController {
+  var audioPlayer: AVAudioPlayer!
+  
   let maxScaleLimit: CGFloat = 2.0
   let minScaleLimit: CGFloat = 0.5
   var animationViewCumulativeScale: CGFloat = 1.0
@@ -39,6 +42,8 @@ public class CMViewController: UIViewController {
     
     animationView.frame = self.view.bounds
     self.view.addSubview(animationView)
+    
+    playBgMusic()
   }
   
   func zoom(gestureRecognizer: UIPinchGestureRecognizer) {
@@ -67,6 +72,15 @@ public class CMViewController: UIViewController {
     gestureRecognizer.setTranslation(CGPoint(x: 0, y: 0), in: view)
   }
 
+  func playBgMusic() {
+    let musicPath = Bundle.main.path(forResource: "bgm1", ofType: "mp3")
+    let url = URL(fileURLWithPath: musicPath!)
+    try! audioPlayer = AVAudioPlayer(contentsOf: url)
+    audioPlayer.numberOfLoops = -1
+    audioPlayer.volume = 1
+    audioPlayer.prepareToPlay()
+    audioPlayer.play()
+  }
 }
 
 extension CMViewController: PlaygroundLiveViewMessageHandler {

@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import AVFoundation
 import PlaygroundSupport
 
 public class BrachistochroneViewController: UIViewController, UICollisionBehaviorDelegate {
+  var audioPlayer: AVAudioPlayer!
+
   let pokemon = ["Abra", "Bellsprout", "Bulbasaur", "Caterpie", "Charmander", "Dratini", "Eevee", "Jigglypuff", "Mankey", "Meowth", "Mew", "Pidgey", "Pikachu", "Psyduck", "Rattata", "Snorlax", "Squirtle", "Venonat", "Weedle", "Zubat"]
   
   let backgroundView = UIImageView()
@@ -65,6 +68,7 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     collision.collisionDelegate = self
     self.animator = UIDynamicAnimator(referenceView: self.view)
     
+    playBgMusic()
   }
   
   override public func viewWillAppear(_ animated: Bool) {
@@ -243,6 +247,16 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
     ball.contentMode = .scaleAspectFill
     animationView.addSubview(ball)
     self.balls.append(ball)
+  }
+  
+  func playBgMusic() {
+    let musicPath = Bundle.main.path(forResource: "bgm2", ofType: "mp3")
+    let url = URL(fileURLWithPath: musicPath!)
+    try! audioPlayer = AVAudioPlayer(contentsOf: url)
+    audioPlayer.numberOfLoops = -1
+    audioPlayer.volume = 1
+    audioPlayer.prepareToPlay()
+    audioPlayer.play()
   }
 }
 
