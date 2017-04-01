@@ -55,7 +55,9 @@ a Swift Playgrounds Project applying for WWDC17
 
 #### Technologies
 
-Swift, UIKit, Gesture Recognizer. 
+Gesture Recognizer, UIDynamics, Core Animation, Core Graphics
+
+#### Features
 
 
 

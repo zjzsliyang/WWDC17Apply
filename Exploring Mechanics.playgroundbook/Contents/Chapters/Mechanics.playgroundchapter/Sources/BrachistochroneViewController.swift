@@ -248,8 +248,16 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
 
 extension BrachistochroneViewController: PlaygroundLiveViewMessageHandler {
   public func receive(_ message: PlaygroundValue) {
-    randomPokemon()
-    initPokemonView()
-    startAnimation()
+    switch message {
+    case .boolean:
+      initPokemonView()
+      startAnimation()
+    case .string:
+      randomPokemon()
+      initPokemonView()
+      startAnimation()
+    default:
+      print("other message error")
+    }
   }
 }

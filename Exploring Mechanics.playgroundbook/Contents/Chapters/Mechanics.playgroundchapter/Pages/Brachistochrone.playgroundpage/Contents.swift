@@ -20,7 +20,7 @@ func randomMeetPokemon() {
 }
 
 func catchIt() {
-  proxy?.send(PlaygroundValue.string("catchIt"))
+  proxy?.send(PlaygroundValue.boolean(true))
 }
 
 //#-end-hidden-code
