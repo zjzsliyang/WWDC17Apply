@@ -73,10 +73,10 @@ public class CMViewController: UIViewController, CLLocationManagerDelegate {
   }
 
   func playBgMusic() {
-    let musicPath = Bundle.main.path(forResource: "bgm1", ofType: "mp3")
+    let musicPath = Bundle.main.path(forResource: "bgm", ofType: "mp3")
     let url = URL(fileURLWithPath: musicPath!)
     try! audioPlayer = AVAudioPlayer(contentsOf: url)
-    audioPlayer.numberOfLoops = -1
+    audioPlayer.numberOfLoops = 0
     audioPlayer.volume = 1
     audioPlayer.prepareToPlay()
     audioPlayer.play()

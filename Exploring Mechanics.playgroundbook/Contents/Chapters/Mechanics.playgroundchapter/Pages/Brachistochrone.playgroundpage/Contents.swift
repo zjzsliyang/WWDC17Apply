@@ -42,8 +42,6 @@ func catchIt() {
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, show, randomMeetPokemon())
 
-
-
 // Try to run it!
 
 catchIt()

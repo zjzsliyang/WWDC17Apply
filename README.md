@@ -57,21 +57,28 @@
 
 ### Technologies
 
-Gesture Recognizer, UIDynamics, Core Animation, Core Graphics, AVFoundation, Core Location.
+Gesture Recognizer, UIDynamics, Core Animation, Core Graphics, AVFoundation, Core Location, PlaygroundSupport.
 
 ### Features
 
-Help students to learn Mechanics easily and intuitively, including Circular Motion and Brachistochrone, which are pretty difficult for  primary school students or even high school students.
+This Playground Book is to help students learn Mechanics easily and intuitively with vivid animation and function calls, including a circular motion page and a brachistochrone page, which have pretty difficult knowledge for primary school students or even a  high school students.
 
-Using the vivid animation and help student call the function by themselves.
+In the Circular Motion Page, users will learn Newton's law of universal gravitation and circular motion formula to calculate the second cosmic velocity. I have using many technologies such as Gesture Recognizer, UIDynamics to create an animation that the earth and moon. In Hints, User will learn the formula step by step and terminology like cosmic velocity are showed in the LiveView and Glossary, they can know the physical things easily without getting confused. To make it work fine, I have to dive deep into RunLoop things to fix bugs since there has little materials about Playground Book tutorial on the Internet. When users calculate the current value, it will launch a rocket and play a music to motivate user via AVFoundation. However, when the value is incorrect, he will get a hint to think again. I also use MVC pattern to separate playground's concerns to have high cohesion and low coupling. Core Location framework is used to get the user's current city asynchronously, but it might have little problems in the delegate.
+
+In Brachistochrone Page, users will learn brachistochrone, which means that from one point to another, the fastest path is not a straight line. I also use UIDynamics to simulate the gravity behavior and collision. Through the perspective of a story(catch your Pokemon), users will realize this common but intriguing phenomenon. Users can call the random function to meet different Pokemon, so the child won't get boring. This page also has a lot physical history associated with this problem, children can learn many physicists' basic information and their opinions within this happy game. I use classes and functions to encapsulate different objects and method to keep the code clean. Extending class, overriding function, delegate are all used to make it work. I also learn to handle the audio(decrease the volume at the end) and draw the UI to have a better user experience.
 
 ## Beyond WWDC(optional)
 
 > In what ways have you considered sharing your coding knowledge and enthusiasm for computer science with others?
 
 - My experience about learning Swift
+  - I start programming at university, and as a sophomore student, I learning iOS development since last semester and now I can develop an app by myself. I attended iOS Club Winter and have a great experience in Guangzhou, China. What's more, I applied an intern in Shanghai this summer in Apple, hope can be an Appler!
+  - As an iOS developer, I am eager to attend WWDC, one of the biggest feast of developers, I really hope to communicate with other developers, Apple's engineers and have a visit.
 - Study in Tongji Apple Club with friends
-- My experience about developing this playground
+  - I am a member of Tongji Apple Club, and this is a space that all students loving iOS development can work together to solve the problems and communicate with others. We can lend adapters and other devices, use the second screen… What's the most important is that we have a meeting sharing what we learned weekly, and Junior students will teach us a lot. I think it's a great form for a student club in universities and wishes to share our experience during WWDC.
+- My experience with developing this Playground Book
+  - One big difference is that I can only create via code and no more storyboard things.
+  - There is a little tutorial about Playground Book and have to try by myself once and once again.
 
 ## Comments(optional)
 
@@ -85,6 +92,8 @@ Using the vivid animation and help student call the function by themselves.
 
 ## Disclaimer
 
-*Pokémon*® is a trademark of Nintendo, Game Freak, and Creatures.
+[Non-Commercial Use Permitted.](http://www.pokemon.com/us/legal/)
 
-Without being authorized, I will only use it for applying WWDC17 Scholarships.
+© 2017 Pokémon. © 1995–2017 Nintendo/Creatures Inc./GAME FREAK inc.
+
+Pokémon, Pokémon character names are trademarks of Nintendo.
