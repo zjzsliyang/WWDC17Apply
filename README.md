@@ -2,9 +2,11 @@
 
 ![iOS version](https://img.shields.io/badge/iOS-10-brightgreen.svg) ![Swift version](https://img.shields.io/badge/Swift-3.0-blue.svg) ![Playgrounds version](https://img.shields.io/badge/Swift%20Playgrounds-1.0%20or%20later-orange.svg) ![supported platform](https://img.shields.io/badge/platform-iPad-lightgrey.svg)
 
-a Swift Playgrounds Project applying for WWDC17
+[a Swift Playgrounds Project applying for WWDC17](https://github.com/zjzsliyang/WWDC17Apply)
 
 ![WWDC17 logo](Res/logo.png)
+
+------
 
 [WWDC Scholarships](https://developer.apple.com/wwdc/scholarships/)
 
@@ -42,9 +44,9 @@ a Swift Playgrounds Project applying for WWDC17
 - Chapters 
   - Mechanics.playgroundchapter
     - Pages
-      - [ ] Freefall
       - [x] Brachistochrone
       - [x] CircularMotion
+      - [ ] Freefall
       - [ ] Pendulum
       - [ ] ElasticCollision
 
@@ -53,16 +55,36 @@ a Swift Playgrounds Project applying for WWDC17
 
 > Tell us about the features and technologies you used in your Swift playground.
 
-#### Technologies
+### Technologies
 
-Gesture Recognizer, UIDynamics, Core Animation, Core Graphics, AVFoundation
+Gesture Recognizer, UIDynamics, Core Animation, Core Graphics, AVFoundation, Core Location.
 
-#### Features
+### Features
 
+Help students to learn Mechanics easily and intuitively, including Circular Motion and Brachistochrone, which are pretty difficult for  primary school students or even high school students.
 
+Using the vivid animation and help student call the function by themselves.
+
+## Beyond WWDC(optional)
+
+> In what ways have you considered sharing your coding knowledge and enthusiasm for computer science with others?
+
+- My experience about learning Swift
+- Study in Tongji Apple Club with friends
+- My experience about developing this playground
+
+## Comments(optional)
+
+> Is there anything else you would like us to know?
 
 ## Screenshot
 
 ![Launch your Rocket](Res/Screenshot1.jpg)
 
 ![Catch your Pokémon](Res/Screenshot2.jpg)
+
+## Disclaimer
+
+*Pokémon*® is a trademark of Nintendo, Game Freak, and Creatures.
+
+Without being authorized, I will only use it for applying WWDC17 Scholarships.

@@ -74,13 +74,13 @@ public class BrachistochroneViewController: UIViewController, UICollisionBehavio
   override public func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     startAnimation()
-    let pinchGesture = UIPinchGestureRecognizer(target: self,
-                                                action: #selector(zoom(gestureRecognizer:)))
-    animationView.addGestureRecognizer(pinchGesture)
-    
-    let panGesture = UIPanGestureRecognizer(target: self,
-                                            action: #selector(pan(gestureRecognizer:)))
-    animationView.addGestureRecognizer(panGesture)
+//    let pinchGesture = UIPinchGestureRecognizer(target: self,
+//                                                action: #selector(zoom(gestureRecognizer:)))
+//    animationView.addGestureRecognizer(pinchGesture)
+//    
+//    let panGesture = UIPanGestureRecognizer(target: self,
+//                                            action: #selector(pan(gestureRecognizer:)))
+//    animationView.addGestureRecognizer(panGesture)
   }
   
   func startAnimation() {

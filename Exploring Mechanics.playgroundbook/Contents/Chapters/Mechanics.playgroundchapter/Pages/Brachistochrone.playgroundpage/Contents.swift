@@ -48,6 +48,7 @@ func catchIt() {
 
 catchIt()
 // And then meet one randomly before catch it.
+// CAUTION: random function will work when you press stop.
 /*:
  Why have you always gotten the second one? Why even a straight line is the slowest?
 
